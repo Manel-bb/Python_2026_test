@@ -1,1 +1,92 @@
+bs = '===='*10
+print(bs)
 
+#d045
+from random import choice
+from time import sleep
+sleep(1)
+print('\n \033[35;1m- JOKENPÔ -\033[m')
+sleep(1)
+actx = str(input('\n Pedra, papel, tesoura, lagarto ou Spock?: '))
+ac = actx.lower()
+lac = ['pedra', 'papel', 'tesoura', 'lagarto', 'spock']
+sleep(0.5)
+print('\n\033[35;1m JO', end='', flush=True)
+sleep(0.3)
+print('-KEN', end='', flush=True)
+sleep(1.3)
+print('-PÔ!\033[m', flush=True)
+while ac != 0:
+    sleep(1.5)
+    ch = choice(lac)
+    print("\n [comput.]: 'Eu escolhi {}.'".format(ch))
+    sleep(1.5)
+    if ac == 'pedra':
+        if ch == 'pedra':
+            print('\n \033[36m Empate!\033[m')
+        elif ch == 'papel':
+            print('\n Papel cobre pedra.\n \033[31;1mVocê perdeu!\033[m')
+        elif ch == 'tesoura':
+            print('\n Pedra quebra tesoura.\n \033[32;1mVocê venceu!\033[m')
+        elif ch == 'lagarto':
+            print('\n Pedra esmaga lagarto.\n \033[32;1mVocê venceu!\033[m')
+        elif ch == 'spock':
+            print('\n Spock vaporiza pedra.\n \033[31;1mVocê perdeu!\033[m')
+    elif ac == 'papel':
+        if ch == 'pedra':
+            print('\n Papel cobre pedra.\n \033[32;1mVocê venceu!\033[m')
+        elif ch == 'papel':
+            print('\n \033[36m Empate!\033[m')
+        elif ch == 'tesoura':
+            print('\n Tesoura corta papel.\n \033[31;1mVocê perdeu!\033[m')
+        elif ch == 'lagarto':
+            print('\n Lagarto come papel.\n \033[31;1mVocê perdeu!\033[m')
+        elif ch == 'spock':
+            print('\n Papel refuta Spock.\n \033[32;1mVocê venceu!\033[m')
+    elif ac == 'tesoura':
+        if ch == 'pedra':
+            print('\n Pedra quebra tesoura.\n \033[31;1mVocê perdeu!\033[m')
+        elif ch == 'papel':
+            print('\n Tesoura corta papel.\n \033[32;1mVocê venceu!\033[m')
+        elif ch == 'tesoura':
+            print('\n \033[36m Empate!\033[m')
+        elif ch == 'lagarto':
+            print('\n Tesoura decapita lagarto.\n \033[32;1mVocê venceu!\033[m')
+        elif ch == 'spock':
+            print('\n Spock esmaga tesoura.\n \033[31;1mVocê perdeu!\033[m')
+    elif ac == 'lagarto':
+        if ch == 'pedra':
+            print('\n Pedra esmaga lagarto.\n \033[31;1mVocê perdeu!\033[m')
+        elif ch == 'papel':
+            print('\n Lagarto come papel.\n \033[32;1mVocê venceu!\033[m')
+        elif ch == 'tesoura':
+            print('\n Tesoura decapita lagarto.\n \033[31;1mVocê perdeu!\033[m')
+        elif ch == 'lagarto':
+            print('\n\033[36m Empate!\033[m')
+        elif ch == 'spock':
+            print('\n Lagarto envenena Spock.\n \033[32;1mVocê venceu!\033[m')
+    elif ac == 'spock':
+        if ch == 'pedra':
+            print('\n Spock vaporiza pedra.\n \033[32;1mVocê venceu!\033[m')
+        elif ch == 'papel':
+            print('\n Papel refuta Spock.\n \033[31;1mVocê perdeu!\033[m')
+        elif ch == 'tesoura':
+            print('\n Spock esmaga tesoura.\n \033[32;1mVocê venceu!\033[m')
+        elif ch == 'lagarto':
+            print('\n Lagarto envenena Spock.\n \033[31;1mVocê perdeu!\033[m')
+        elif ch == 'spock':
+            print('\n \033[36mEmpate!\n Vida longa e próspera!\033[m')
+    else:
+        print("\n \033[31;1m'{}' é invalido. Escolha entre: Pedra, papel, tesoura, lagarto ou Spock.\033[m".format(actx))
+    print('')
+    print(bs)
+    actx = str(input('\n Pedra, papel, tesoura, lagarto ou Spock?: '))
+    ac = actx.lower()
+    sleep(0.5)
+    print('\n\033[35;1m JO', end='', flush=True)
+    sleep(0.3)
+    print('-KEN', end='', flush=True)
+    sleep(1.3)
+    print('-PÔ!\033[m', flush=True)
+print(' ')
+print(bs)
